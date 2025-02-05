@@ -18,7 +18,8 @@ import java.util.UUID;
 public class CSRF {
     @ApiOperation(value = "vul: 危险的转账")
     @GetMapping("/transfer/vul")
-    public Map<String, Object> transferMoney(HttpServletRequest request, HttpServletResponse response, HttpSession session) {
+    public Map<String, Object> transferMoney(HttpServletRequest request, HttpServletResponse response, HttpSession session) {\
+        //test
         // 从请求中获取转账金额和接收者
         String from = (String) session.getAttribute("LoginUser");
         String amount = request.getParameter("amount");
